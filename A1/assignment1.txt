@@ -1,0 +1,112 @@
+postgres=# \i adc/assignment1.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+psql:adc/assignment1.sql:59: ERROR:  null value in column "bid" violates not-null constraint
+DETAIL:  Failing row contains (null, Interlake, blue).
+psql:adc/assignment1.sql:61: ERROR:  duplicate key value violates unique constraint "boat_pkey"
+DETAIL:  Key (bid)=(101) already exists.
+psql:adc/assignment1.sql:63: ERROR:  duplicate key value violates unique constraint "reserves_pkey"
+DETAIL:  Key (sid, bid)=(74, 103) already exists.
+psql:adc/assignment1.sql:68: ERROR:  insert or update on table "reserves" violates foreign key constraint "reserves_sid_fkey"
+DETAIL:  Key (sid)=(99) is not present in table "sailor".
+psql:adc/assignment1.sql:72: ERROR:  update or delete on table "sailor" violates foreign key constraint "reserves_sid_fkey" on table "reserves"
+DETAIL:  Key (sid)=(22) is still referenced from table "reserves".
+ sid | rating 
+-----+--------
+  22 |      7
+  29 |      1
+  31 |      8
+  32 |      8
+  58 |     10
+  64 |      7
+  71 |     10
+  74 |      9
+  85 |      3
+  95 |      3
+(10 rows)
+
+ boatname  
+-----------
+ Interlake
+ Marine
+(2 rows)
+
+ boatid | color 
+--------+-------
+    101 | blue
+    102 | red
+    103 | green
+    104 | red
+(4 rows)
+
+  sname  
+---------
+ Horatio
+ Lubber
+ Dustin
+(3 rows)
+
+   bname   
+-----------
+ Interlake
+ Interlake
+ Clipper
+ Marine
+(4 rows)
+
+  sname  
+---------
+ Dustin
+ Horatio
+(2 rows)
+
+   bname   
+-----------
+ Interlake
+ Interlake
+ Clipper
+(3 rows)
+
+ bid 
+-----
+(0 rows)
+
+   bname   
+-----------
+ Interlake
+ Interlake
+ Clipper
+(3 rows)
+
+ sid 
+-----
+  74
+(1 row)
+
+DROP TABLE
+DROP TABLE
+DROP TABLE
